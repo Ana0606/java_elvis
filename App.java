@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         int anoNasc, idade, aposenta; // variável do ano de nascimento - número inteiro
-        double renda; // variável de renda - número real
+        double renda, novaRenda; // variável de renda - número real
         boolean dev; // variável lógica se você é programador - true ou false
         String nome;  // variável que pergunta o nome do programador
         char genero;  // variável que define o gênero da pessoa
@@ -32,10 +32,19 @@ public class App {
         else{
             aposenta=65-idade; // previsão de aposentadoria
         }
+
+        if(dev){
+            novaRenda = (renda*3)/13;
+        }
+        else{
+            novaRenda = renda/13;
+        }
         
         // procedimentos de saída:
         video.println(nome+" este ano você completa "+idade+" anos.");
         video.println("Sua renda anual é de: R$"+renda);
         video.println("Faltam "+aposenta+" anos para se aposentar");
+        video.println("Dev seria com renda mensal de R$"+novaRenda);
+        video.println("Se fosse Dev pra gringa o salário é R$"+novaRenda*5);
     }
 }
