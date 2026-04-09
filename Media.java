@@ -18,16 +18,12 @@ public class Media {
         if (mediaFinal >= 6.0){
             aprovado = "Aprovado!";
         }
-        else{
-            aprovado = "Reprovado!";
-        }
-
-        if (mediaFinal > 4 || mediaFinal < 5.9){
+        else if (mediaFinal > 4 && mediaFinal < 5.9){
             aprovado = "Recuperação!";
-        }
-        else{
-            aprovado = "Reprovado!";
-        }
+            }
+            else{
+                aprovado = "Reprovado!";
+            }
 
         System.out.println("Sua média anual: "+mediaFinal);
         System.out.println(aprovado);
