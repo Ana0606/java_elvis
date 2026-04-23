@@ -11,7 +11,7 @@ public class contadorRegre {
         numero = teclado.nextInt();
 
         while (numero >= 0){
-            System.out.println(numero);
+            System.out.print(numero + ", ");
             numero = numero - 1;
         }
             System.out.println("BOOOMMM!!!");
