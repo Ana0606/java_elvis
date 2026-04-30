@@ -6,22 +6,22 @@ public class PIN {
 
         Scanner teclado = new Scanner(System.in);
 
-        int valor, mult, r;
+        int multiplo, contador;
+        multiplo = 0;
 
         System.out.println("Digite um número que será o múltiplo");
-        valor = teclado.nextInt();
+        multiplo = teclado.nextInt();
 
-        mult = 0;
+        contador = 0;
 
-        while (mult <= 40){
-            r = valor * mult;
-            mult = mult + 1;
+        while (contador < 40){
+            contador = contador + 1;
 
-               if (r % mult == 0){
-                System.out.println("PIN");
+               if (contador % multiplo == 0){
+                System.out.print("PIN, ");
                }
                else{
-                System.out.println(r);
+                System.out.print(contador + ", ");
                }
 
         }
