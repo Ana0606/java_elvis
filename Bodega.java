@@ -15,12 +15,7 @@ public class Bodega {
         do{
             System.out.println("Informe o valor do item");
             valor = teclado.nextFloat();
-             if(valor > 0){
-                valor = valor + valor;
-             }
-             else{
-                
-             }
+            
         }while(valor != 0);
 
 

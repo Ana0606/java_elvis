@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Bodegacopy {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        System.out.println("Padoca Espíndola");
 
         Scanner teclado = new Scanner(System.in);
 
@@ -15,9 +15,12 @@ public class Bodegacopy {
         System.out.println("Informe o valor do item");
         valor = teclado.nextFloat();
 
+        total = 0;
+
         while(valor != 0){
+            System.out.println("Informe o valor do item");
+            valor = teclado.nextFloat();
             total = valor + valor;
-            System.out.println("Valor total: " + total);
         }
 
         System.out.println("Você terá que pagar: " + total);
