@@ -32,6 +32,10 @@ public class idoso {
                     System.out.println("Qual sua idade?");
                     verificaOnibus(teclado.nextInt());
                     break;
+                case 'b':
+                    System.out.println("Em que ano nasceu e qual o valor do ingresso?");
+                cinema(anoNasc, valorIngresso);
+                    break;
                 default:
                     imprimeTofu();
                     System.out.println("Obrigado e até breve!");
