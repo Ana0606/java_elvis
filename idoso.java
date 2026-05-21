@@ -4,7 +4,7 @@ public class idoso {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         imprimeTofu();
-        System.out.println("Verificação de idade");
+        System.out.println("Verificação de idade \n");
         menuEscolha();
 
     }
@@ -33,8 +33,7 @@ public class idoso {
                     verificaOnibus(teclado.nextInt());
                     break;
                 case 'b':
-                    System.out.println("Em que ano nasceu e qual o valor do ingresso?");
-                cinema(anoNasc, valorIngresso);
+                    System.out.println("Em que ano nasceu?");
                     break;
                 default:
                     imprimeTofu();
