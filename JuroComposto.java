@@ -17,7 +17,7 @@ public class JuroComposto {
         video.println("Você escolheu: " + aplicacao);
         setValoresRendimento();
         //lógica aritmética
-        getMontanteMensal();
+        //getResultadoMensal();
         //saída
         video.println("Obrigado por escolher o banco Tofu!");
     }
@@ -30,8 +30,8 @@ public class JuroComposto {
         video.println("Qual o juro?");
         juros = teclado.nextDouble();
     }
-
-    public static void getMontanteMensal(){
+    /* 
+    public static void getResultadoMensal(){
         int mesAmes;
         double resultado = capital;
 
@@ -41,23 +41,38 @@ public class JuroComposto {
             video.printf(": R$ %.2f \n", resultado);
         }
     }
-
+    */
     public static String escolherAplicacao(){
         String minhaAplicacao;
         System.out.println("Qual aplicação deseja?");
-        System.out.println("\n a.CBD\n b.RDB\n c.Cripto\n d.Fundos\n");
+        System.out.println("\n a.CBD\n b.RDB\n c.Cripto\n d.Fundos\n e.Poupança\n f.Sair\n ");
         System.out.println("Informe sua opção: ");
         switch (teclado.next().charAt(0)){
             case 'a': minhaAplicacao = "CDB"; // 1.2/100 ao mês
+            opCDB();
                 break;
             case 'b' : minhaAplicacao = "RDB"; // 0.83/100 ao mês
+            opRDB();
                 break; 
             case 'c': minhaAplicacao = "CRIPTO"; // aleatório entre 2 e 8% ao mês
                 break;
-            default: minhaAplicacao = "FUNDOS"; // 0.70/100 ao mês
+            case 'd': minhaAplicacao = "FUNDOS"; // 0.70/100 ao mês
+                break;
+            case 'e': minhaAplicacao = "POUPANÇA"; // 0,5/100 ao mês
+                break;
+            default: minhaAplicacao = "SAIR"; 
             // inserir poupança e atualizar default para digitação do usuário + rodar mais de uma vez até o usuário desjar sair 
         }
         return minhaAplicacao;
+    }
+
+    public static void opCDB(){
+        video
+        juros = 1.2/100;
+
+    }
+
+    public static void opRDB(){
 
     }
 }
