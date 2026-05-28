@@ -26,13 +26,18 @@ public class idoso {
                            "c. calcular prestação de consignado \n" +
                            "d. encerrar programa \n");
         System.out.println("Digite a opção desejada");
+        op = (teclado.next().charAt(0));
 
-          switch (teclado.next().charAt(0)){
+          switch (op){
                 case 'a':
                     System.out.println("Qual sua idade?");
                     verificaOnibus(teclado.nextInt());
                     break;
                 case 'b':
+                    System.out.println("Qual o valor do ingresso?");
+                    cinema(teclado.nextDouble());
+                    break;
+                case 'c':
                     System.out.println("Em que ano nasceu?");
                     break;
                 default:
@@ -40,6 +45,7 @@ public class idoso {
                     System.out.println("Obrigado e até breve!");
                     break;
           } 
+          return op;
 
     }
 
@@ -53,13 +59,16 @@ public class idoso {
         }
     }
 
-    public static void cinema(int anoNasc, float valorIngresso){
-        anoNasc = anoNasc - 2026;
+    public static void cinema(double valorIngresso){
+        int anoNasc;
+        System.out.println("Em que ano você nasceu?");
+        anoNasc(teclado.nextInt());
+        anoNasc = 2026 - anoNasc;
         if (anoNasc < 65){
-            System.out.println("Você terá direito a meia entrada");
+            System.out.println("Você terá direito a meia entrada. O valor do ingresso será de: R$" + valorIngresso/2);
         }
         else {
-            System.out.println("Você não tem direito a meia entrada");
+            System.out.println("Você não tem direito a meia entrada" + valorIngresso);
         }
     }
     
