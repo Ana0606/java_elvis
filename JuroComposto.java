@@ -48,13 +48,14 @@ public class JuroComposto {
         System.out.println("\n a.CBD\n b.RDB\n c.Cripto\n d.Fundos\n");
         System.out.println("Informe sua opção: ");
         switch (teclado.next().charAt(0)){
-            case 'a': minhaAplicacao = "CDB";
+            case 'a': minhaAplicacao = "CDB"; // 1.2/100 ao mês
                 break;
-            case 'b' : minhaAplicacao = "RDB";
+            case 'b' : minhaAplicacao = "RDB"; // 0.83/100 ao mês
+                break; 
+            case 'c': minhaAplicacao = "CRIPTO"; // aleatório entre 2 e 8% ao mês
                 break;
-            case 'c': minhaAplicacao = "CRIPTO";
-                break;
-            default: minhaAplicacao = "FUNDOS";
+            default: minhaAplicacao = "FUNDOS"; // 0.70/100 ao mês
+            // inserir poupança e atualizar default para digitação do usuário + rodar mais de uma vez até o usuário desjar sair 
         }
         return minhaAplicacao;
 
