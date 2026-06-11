@@ -4,7 +4,9 @@ import java.io.PrintStream;
 public class caixaEletro {
     private static Scanner teclado = new Scanner(System.in);
     private static PrintStream video = new PrintStream(System.out);
-    double saldo = 0, deposito, saque;
+    private static double saldo = 0, deposito, saque;
+
+    
 
     public static void escolha(){
         char opcao;
@@ -14,12 +16,13 @@ public class caixaEletro {
         opcao = teclado.next().charAt(0);
         switch(opcao){
             case 'a':
-                video.println("Quanto deseja depositar?");
                 deposito();
                 break;
             case 'b':
+                saldo();
                 break;
             case 'c':
+                saque();
                 break;
             default:
                 break;
@@ -28,8 +31,12 @@ public class caixaEletro {
     }
 
     public static void deposito(){
-        deposito = teclado.nextDouble();
-        saldo = saldo + deposito;
+        do{
+            System.out.println("Quanto deseja depositar?");
+            deposito = teclado.nextDouble();
+            System.out.println("O valor do seu depósito foi de: " + deposito);
+            saldo = saldo + deposito;
+        }while (deposito != 0);
     }
 
     public static void saldo(){

@@ -91,35 +91,35 @@ public class JuroComposto {
         juros = 1.2/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
     public static void opRDB(){
         juros = 0.83/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
     public static void opCripto(){
         juros = 2.0/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
     public static void opFundos(){
         juros = 0.70/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
     public static void opPoupanca(){
         juros = 0.5/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
     public static void opInserir(){
@@ -127,7 +127,7 @@ public class JuroComposto {
         juros = juros/100;
         montante = capital * Math.pow(1 + juros, meses);
         video.println("O rendimento final será de: ");
-        video.println("R$ %.2f \n", montante);
+        video.printf("R$ %.2f \n", montante);
     }
 
 }
