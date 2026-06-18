@@ -14,15 +14,24 @@ public class ex2 {
         palavraV = palavraS.toCharArray();
 
         System.out.println(palavraV);
-        System.out.println("Primeira letra da palavra: " + palavraV[0]); // primeira letra da palavra
         System.out.println("Tamanho da palavra?");
         System.out.println(palavraV.length); // mostra tamanho da palavra em int
+        System.out.println("Primeira letra da palavra: " + palavraV[0]); // primeira letra da palavra
         int u, i;
         u = palavraV.length - 1; // 5
+        String invertida = "";
         System.out.println("Última letra da palavra: " + palavraV[u]);
         for(i = u; i >= 0; i--){
             System.out.println(palavraV[i]);
+            invertida += palavraV[i];
         }
 
+        if(palavraS.equals(invertida)){
+            System.out.println("É um palíndromo");
+        }
+        else{
+            System.out.println("Não é palíndromo");
+        }
+        
     }
 }
