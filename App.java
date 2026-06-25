@@ -1,50 +1,26 @@
-import java.io.PrintStream;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        int anoNasc, idade, aposenta; // variável do ano de nascimento - número inteiro
-        double renda, novaRenda; // variável de renda - número real
-        boolean dev; // variável lógica se você é programador - true ou false
-        String nome;  // variável que pergunta o nome do programador
-        char genero;  // variável que define o gênero da pessoa
-        Scanner teclado = new Scanner(System.in); // instalar entrada
-        PrintStream video = new PrintStream(System.out); 
-        
-        // entrada de variáveis
-        video.println("Calculadora de Idade!"); // mensagem para usuário
-        video.println("Qual seu nome?");
-        nome = teclado.next(); // faz leitura da string nome - entrada
-        video.println("Você é programador?");
-        dev = teclado.nextBoolean(); 
-        video.println("Qual seu gênero? (letra:)");
-        genero = teclado.next().charAt(0); // forma mais adequada de ler um caracter - char
-        video.println("Qual sua renda mensal?");
-        renda = teclado.nextDouble();
-        video.println("Em que ano nasceu?");
-        anoNasc = teclado.nextInt();
-        // procedimentos lógicos e aritméticos: 
-        idade = 2026 - anoNasc; // diz a idade que completa esse ano
-        renda = renda*13; //renda anual total básica com décimo terceiro:
-        if(genero=='m'){ // teste para ver quanto tempo aposenta
-            aposenta=70-idade; // daqui quanto tempo aposenta-se masculino
-        }
-        else{
-            aposenta=65-idade; // previsão de aposentadoria
-        }
+    public static Scanner teclado; // objeto da Classe Scanner
+    public static Aluno discente; // objeto da Classe Aluno que criamos
 
-        if(dev){
-            novaRenda = (renda*3)/13;
-        }
-        else{
-            novaRenda = renda/13;
-        }
-        
-        // procedimentos de saída:
-        video.println(nome+" este ano você completa "+idade+" anos.");
-        video.println("Sua renda anual é de: R$"+renda);
-        video.println("Faltam "+aposenta+" anos para se aposentar");
-        video.println("Dev seria com renda mensal de R$"+novaRenda);
-        video.println("Se fosse Dev pra gringa o salário é R$"+novaRenda*5);
+    public static void main(String[] args) throws Exception {
+        System.out.println("Cadastro de alunos!");
+        teclado = new Scanner(System.in); // inicializa meu teclado
+        discente = new Aluno(); // inicializa meu aluninho
+        System.out.println("Informe Nome, Turma, Idade e Média do discente: ");
+        // informando dados do discente do teclado direto para o atributo
+        discente.nome = teclado.next();
+        discente.turma = teclado.next();
+        discente.idade = teclado.nextInt();
+        discente.media = teclado.nextDouble();
+        discente.conceito = teclado.next().charAt(0);
+        discente.animal = teclado.next();
+        System.out.println("Nome: " + discente.nome);
+        System.out.println("Turma: " + discente.turma);
+        System.out.println("Idade: " + discente.idade);
+        System.out.println("Média: " + discente.media);
+        System.out.println("Conceito: " + discente.conceito);
+        System.out.println("Nome do animal: " + discente.animal);
     }
 }
